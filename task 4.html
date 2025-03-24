@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    input {
+      padding: 10px;
+      margin: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    #welcomeMessage {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to JavaScript!</h1>
+
+  <!-- Input field to capture username -->
+  <input type="text" id="username" placeholder="Enter your username" />
+
+  <!-- Button to trigger the greeting -->
+  <button onclick="welcomeUser()">Enter</button>
+
+  <!-- Area where the welcome message will appear -->
+  <div id="welcomeMessage"></div>
+
+  <script>
+    // Function to welcome the user
+    function welcomeUser() {
+      var username = document.getElementById('username').value;
+      if (username) {
+        document.getElementById('welcomeMessage').innerText = 'Welcome to JS ' + username;
+      } else {
+        document.getElementById('welcomeMessage').innerText = 'Please enter a username.';
+      }
+    }
+  </script>
+
+</body>
+</html>

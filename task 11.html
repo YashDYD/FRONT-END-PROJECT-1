@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Triangle</title>
+  <style>
+    body { text-align: center; }
+    .output { font-family: monospace; white-space: pre; }
+  </style>
+</head>
+<body>
+
+  <h1>Star Triangle Generator</h1>
+  <input type="number" id="num" min="1" max="20">
+  <button onclick="generateTriangle()">Generate</button>
+
+  <div id="output" class="output"></div>
+
+  <script>
+    function generateTriangle() {
+      const num = document.getElementById('num').value;
+      const outputDiv = document.getElementById('output');
+      if (num < 1 || num > 20) { outputDiv.textContent = 'Invalid input.'; return; }
+      
+      let pattern = '';
+      for (let i = 1; i <= num; i++) {
+        pattern += ' '.repeat(num - i) + '* '.repeat(i).trim() + '\n';
+      }
+      outputDiv.textContent = pattern;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call Stack Task Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #currentPipeline {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f9f9f9;
+      min-height: 100px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Call Stack Task Manager</h1>
+    <input type="text" id="taskName" placeholder="Enter task name" />
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="undoTask()">Undo Task</button>
+
+    <div id="currentPipeline">
+      <h3>Current Pipeline:</h3>
+      <p id="stackContent">No tasks added yet.</p>
+    </div>
+  </div>
+
+  <script>
+    // Array to hold tasks (call stack)
+    const taskStack = [];
+
+    // Function to add a task to the stack
+    function addTask() {
+      const taskName = document.getElementById('taskName').value;
+      if (taskName) {
+        taskStack.push(taskName);
+        updatePipelineDisplay();
+        document.getElementById('taskName').value = ''; // Clear input field
+      } else {
+        alert("Please enter a task name.");
+      }
+    }
+
+    // Function to undo the last task (pop from the stack)
+    function undoTask() {
+      if (taskStack.length > 0) {
+        taskStack.pop();
+        updatePipelineDisplay();
+      } else {
+        alert("No tasks to undo.");
+      }
+    }
+
+    // Function to update the displayed task stack
+    function updatePipelineDisplay() {
+      const stackContent = document.getElementById('stackContent');
+      if (taskStack.length > 0) {
+        stackContent.innerHTML = taskStack.join('<br/>');
+      } else {
+        stackContent.innerHTML = 'No tasks added yet.';
+      }
+    }
+  </script>
+
+</body>
+</html>

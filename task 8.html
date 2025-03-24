@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Uppercase Converter</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        input, output {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        output {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Input field for the user -->
+        <input type="text" id="inputText" placeholder="Type something" oninput="convertToUpperCase()">
+        
+        <!-- Output field where the text will be displayed -->
+        <output id="outputText"></output>
+    </div>
+
+    <script>
+        // JavaScript function to convert text to uppercase and display in the output field
+        function convertToUpperCase() {
+            // Get the value from the input field
+            const inputField = document.getElementById('inputText');
+            const outputField = document.getElementById('outputText');
+            
+            // Convert the input value to uppercase and set it as the output field's value
+            outputField.textContent = inputField.value.toUpperCase();
+        }
+    </script>
+
+</body>
+</html>

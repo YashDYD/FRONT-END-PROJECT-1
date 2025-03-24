@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Projects Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>My Project Gallery</h1>
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+            <label class="switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider round"></span>
+            </label>
+            <i class="fas fa-sun"></i>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <h2>Projects</h2>
+            <ul id="project-nav">
+                <!-- Project links will be populated here by JavaScript -->
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="project-content">
+            <div class="welcome-screen">
+                <h2>Welcome to My Project Gallery</h2>
+                <p>Select a project from the navigation to view details.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span id="total-projects">0</span>
+                        <p>Projects</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Project Gallery. All rights reserved.</p>
+    </footer>
+
+    <!-- Projects data -->
+    <script src="projects.js"></script>
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

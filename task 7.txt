@@ -1,0 +1,52 @@
+Submit your JavaScript code in Canvas as a text entry.
+
+* You should write your own code without copying. Remember that any plagiarism will result in zero points in the assignment. 
+
+// Arithmetic Operations
+let num1 = 10;
+let num2 = 5;
+
+// Addition
+let addition = num1 + num2;
+console.log("Addition: " + addition); // 10 + 5 = 15
+
+// Subtraction
+let subtraction = num1 - num2;
+console.log("Subtraction: " + subtraction); // 10 - 5 = 5
+
+// Multiplication
+let multiplication = num1 * num2;
+console.log("Multiplication: " + multiplication); // 10 * 5 = 50
+
+// Division
+let division = num1 / num2;
+console.log("Division: " + division); // 10 / 5 = 2
+
+// Modulus (remainder)
+let modulus = num1 % num2;
+console.log("Modulus: " + modulus); // 10 % 5 = 0
+
+
+// Assignment Operations
+let x = 20;
+let y = 4;
+
+// Assignment with equal sign
+x = y;
+console.log("Assignment (x = y): " + x); // x = 4
+
+// Addition assignment
+x += y; // x = x + y
+console.log("Addition assignment (x += y): " + x); // 4 + 4 = 8
+
+// Subtraction assignment
+x -= y; // x = x - y
+console.log("Subtraction assignment (x -= y): " + x); // 8 - 4 = 4
+
+// Multiplication assignment
+x *= y; // x = x * y
+console.log("Multiplication assignment (x *= y): " + x); // 4 * 4 = 16
+
+// Division assignment
+x /= y; // x = x / y
+console.log("Division assignment (x /= y): " + x); // 16 / 4 = 4

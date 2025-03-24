@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Calculator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 150px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Grade Calculator</h1>
+    <label for="score">Enter your score: </label>
+    <input type="number" id="score" placeholder="Enter score (0-100)" />
+    <button onclick="calculateGrade()">Get Grade</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculateGrade() {
+      const score = document.getElementById('score').value;
+      let grade = "";
+
+      if (score >= 80) {
+        grade = "A";
+      } else if (score >= 60) {
+        grade = "B";
+      } else if (score >= 40) {
+        grade = "C";
+      } else if (score >= 0) {
+        grade = "F";
+      } else {
+        grade = "Invalid input";
+      }
+
+      // Display the result
+      document.getElementById('result').innerText = `Your grade is: ${grade}`;
+    }
+  </script>
+</body>
+</html>
