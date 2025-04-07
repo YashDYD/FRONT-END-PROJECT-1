@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome Page</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      padding-top: 50px;
     }
-    input {
+
+    input, button {
+      width: 90%;
+      max-width: 300px;
       padding: 10px;
-      margin: 10px;
+      margin: 10px 0;
+      font-size: 16px;
     }
+
     button {
-      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
     }
+
     #welcomeMessage {
       margin-top: 20px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
     }
   </style>
@@ -29,23 +41,22 @@
 
   <h1>Welcome to JavaScript!</h1>
 
-  <!-- Input field to capture username -->
   <input type="text" id="username" placeholder="Enter your username" />
+  
+  <!-- Tooltip on hover using title -->
+  <button onclick="welcomeUser()" title="Welcome to JS World!">Enter</button>
 
-  <!-- Button to trigger the greeting -->
-  <button onclick="welcomeUser()">Enter</button>
-
-  <!-- Area where the welcome message will appear -->
   <div id="welcomeMessage"></div>
 
   <script>
-    // Function to welcome the user
     function welcomeUser() {
-      var username = document.getElementById('username').value;
+      const username = document.getElementById('username').value.trim();
+      const messageDiv = document.getElementById('welcomeMessage');
+
       if (username) {
-        document.getElementById('welcomeMessage').innerText = 'Welcome to JS ' + username;
+        messageDiv.innerText = `Welcome to JS World, ${username}!`;
       } else {
-        document.getElementById('welcomeMessage').innerText = 'Please enter a username.';
+        messageDiv.innerText = 'Please enter a username.';
       }
     }
   </script>
