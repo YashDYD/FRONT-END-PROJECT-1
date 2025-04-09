@@ -60,18 +60,7 @@ function initProjectGallery() {
                     </div>
                 </div>
             `;
-        } else if (project.fileType === 'zip') {
-            // For zip files, provide a download button
-            projectContent.innerHTML = `
-                <div class="project-card">
-                    <h2>${project.title}</h2>
-                    <div class="zip-info">
-                        <p>Click below to download the ZIP file:</p>
-                        <a href="${project.path}" download class="download-btn">Download File</a>
-                    </div>
-                </div>
-            `;
-        }
+        } 
     }
 
     // Activate first project by default (if projects exist)
