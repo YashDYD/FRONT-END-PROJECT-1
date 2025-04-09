@@ -153,7 +153,7 @@ const projects = [
         technologies: ["JavaScript", "OOP"],
         features: ["Object-oriented programming"],
         path: "task 13.html",
-        demo: "task 12.html",
+        demo: "task 13.html",
         code: "#"
     },
     {
