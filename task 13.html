@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+</head>
+<body>
+
+<h1>Student Information</h1>
+
+<div>
+    <h2>Update Details:</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter Name">
+    <label for="age">Age:</label>
+    <input type="number" id="age" placeholder="Enter Age">
+    <label for="branch">Branch:</label>
+    <input type="text" id="branch" placeholder="Enter Branch">
+    <button onclick="updateInfo()">Update Info</button>
+</div>
+
+<h2>Student History:</h2>
+<ul id="infoList"></ul>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let studentHistory = [];
+
+    // Function to display the student info in the list
+    function displayInfo() {
+        const infoList = document.getElementById("infoList");
+        infoList.innerHTML = ""; // Clear previous list
+        studentHistory.forEach(student => {
+            const li = document.createElement("li");
+            li.textContent = `Name: ${student.name}, Age: ${student.age}, Branch: ${student.branch}`;
+            infoList.appendChild(li);
+        });
+    }
+
+    // Function to update and add new student info
+    window.updateInfo = function() {
+        const newName = document.getElementById("name").value.trim();
+        const newAge = document.getElementById("age").value.trim();
+        const newBranch = document.getElementById("branch").value.trim();
+
+        // Check if all fields have values
+        if (newName && newAge && newBranch) {
+            // Convert age to number
+            const ageNumber = parseInt(newAge, 10);
+
+            // Validate if age is a valid number
+            if (isNaN(ageNumber)) {
+                alert("Please enter a valid age.");
+                return;
+            }
+
+            // Add new student info to the history
+            studentHistory.push({ name: newName, age: ageNumber, branch: newBranch });
+            // Update the display of student history
+            displayInfo();
+        } else {
+            alert("Please fill in all fields.");
+        }
+    };
+});
+</script>
+
+</body>
+</html>
