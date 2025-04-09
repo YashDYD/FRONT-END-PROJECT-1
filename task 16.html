@@ -1,1 +1,75 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .sidebar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .sidebar button {
+            padding: 10px 20px;
+            margin: 0 30px;
+            border: none;
+            cursor: pointer;
+            background: #ccc;
+        }
+        .sidebar button.active {
+            background: #007bff;
+            color: #fff;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button id="btn-task1" onclick="displayTask('task1')">Project 1</button>
+            <button id="btn-task2" onclick="displayTask('task2')">Project 2</button>
+            <button id="btn-task3" onclick="displayTask('task3')">Project 3</button>
+        </div>
+        <div class="content">
+            <iframe id="taskFrame" src=""></iframe>
+        </div>
+    </div>
+
+    <script>
+        const works = {
+            "task1": { "title": "Project 1", "url": "works/task1/index.html" },
+            "task2": { "title": "Project 2", "url": "works/task2/index.html" },
+            "task3": { "title": "Project 3", "url": "works/task3/index.html" }
+        };
+
+        function displayTask(taskKey) {
+            const frame = document.getElementById('taskFrame');
+            frame.src = works[taskKey].url;
+            
+            document.querySelectorAll('.sidebar button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${taskKey}`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
