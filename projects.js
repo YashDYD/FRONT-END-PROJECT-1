@@ -161,11 +161,11 @@ const projects = [
         title: "Task 14 class work objects 2",
         date: "2025",
         description: "Advanced JavaScript objects",
-        fileType: "zip",
+        fileType: "html",
         technologies: ["JavaScript", "OOP"],
         features: ["Advanced OOP concepts"],
-        path: "task 14.zip",
-        demo: "#",
+        path: "task 14.html",
+        demo: "task 14.html",
         code: "#"
     },
     {
