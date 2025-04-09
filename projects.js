@@ -149,11 +149,11 @@ const projects = [
         title: "Task 13 class work objects",
         date: "2025",
         description: "Working with JavaScript objects",
-        fileType: "zip",
+        fileType: "html",
         technologies: ["JavaScript", "OOP"],
         features: ["Object-oriented programming"],
-        path: "task 13.zip",
-        demo: "#",
+        path: "task 13.html",
+        demo: "task 12.html",
         code: "#"
     },
     {
