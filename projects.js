@@ -185,11 +185,11 @@ const projects = [
         title: "Task 16 class work JSON",
         date: "2025",
         description: "Working with JSON in JavaScript",
-        fileType: "txt",
+        fileType: "html",
         technologies: ["JavaScript", "JSON"],
         features: ["Data interchange"],
-        path: "task 16.txt",
-        demo: "task 16.txt",
+        path: "task 16.html",
+        demo: "task 16.html",
         code: "#"
     }
 ];
