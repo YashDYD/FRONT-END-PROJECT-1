@@ -29,12 +29,6 @@
       border-radius: 4px;
       cursor: pointer;
     }
-
-    #welcomeMessage {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
@@ -46,20 +40,18 @@
   <!-- Tooltip on hover using title -->
   <button onclick="welcomeUser()" title="Welcome to JS World!">Enter</button>
 
-  <div id="welcomeMessage"></div>
-
   <script>
     function welcomeUser() {
       const username = document.getElementById('username').value.trim();
-      const messageDiv = document.getElementById('welcomeMessage');
 
       if (username) {
-        messageDiv.innerText = `Welcome to JS World, ${username}!`;
+        alert(`Welcome Yaswanth`);
       } else {
-        messageDiv.innerText = 'Please enter a username.';
+        alert('Please enter a username.');
       }
     }
   </script>
 
 </body>
 </html>
+
