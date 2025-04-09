@@ -173,11 +173,11 @@ const projects = [
         title: "Task 15 class & Bootstrap",
         date: "2025",
         description: "Using Bootstrap with JavaScript classes",
-        fileType: "zip",
+        fileType: "html",
         technologies: ["JavaScript", "Bootstrap", "OOP"],
         features: ["UI frameworks"],
-        path: "task 15.zip",
-        demo: "#",
+        path: "task 15.html",
+        demo: "task 15.html",
         code: "#"
     },
     {
