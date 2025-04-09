@@ -1,52 +1,47 @@
-Submit your JavaScript code in Canvas as a text entry.
-
-* You should write your own code without copying. Remember that any plagiarism will result in zero points in the assignment. 
-
 // Arithmetic Operations
-let num1 = 10;
-let num2 = 5;
+let a = 10;
+let b = 5;
 
-// Addition
-let addition = num1 + num2;
-console.log("Addition: " + addition); // 10 + 5 = 15
-
-// Subtraction
-let subtraction = num1 - num2;
-console.log("Subtraction: " + subtraction); // 10 - 5 = 5
-
-// Multiplication
-let multiplication = num1 * num2;
-console.log("Multiplication: " + multiplication); // 10 * 5 = 50
-
-// Division
-let division = num1 / num2;
-console.log("Division: " + division); // 10 / 5 = 2
-
-// Modulus (remainder)
-let modulus = num1 % num2;
-console.log("Modulus: " + modulus); // 10 % 5 = 0
-
+console.log("Arithmetic Operations:");
+console.log("Addition: a + b = " + (a + b));          // 10 + 5 = 15
+console.log("Subtraction: a - b = " + (a - b));       // 10 - 5 = 5
+console.log("Multiplication: a * b = " + (a * b));    // 10 * 5 = 50
+console.log("Division: a / b = " + (a / b));          // 10 / 5 = 2
+console.log("Modulo (Remainder): a % b = " + (a % b)); // 10 % 5 = 0
 
 // Assignment Operations
 let x = 20;
-let y = 4;
+let y = 8;
 
-// Assignment with equal sign
-x = y;
-console.log("Assignment (x = y): " + x); // x = 4
+console.log("\nAssignment Operations:");
+x += 5; // x = x + 5
+console.log("Addition Assignment: x += 5 => x = " + x); // x = 20 + 5 = 25
 
-// Addition assignment
-x += y; // x = x + y
-console.log("Addition assignment (x += y): " + x); // 4 + 4 = 8
+y -= 3; // y = y - 3
+console.log("Subtraction Assignment: y -= 3 => y = " + y); // y = 8 - 3 = 5
 
-// Subtraction assignment
-x -= y; // x = x - y
-console.log("Subtraction assignment (x -= y): " + x); // 8 - 4 = 4
+x *= 2; // x = x * 2
+console.log("Multiplication Assignment: x *= 2 => x = " + x); // x = 25 * 2 = 50
 
-// Multiplication assignment
-x *= y; // x = x * y
-console.log("Multiplication assignment (x *= y): " + x); // 4 * 4 = 16
+y /= 2; // y = y / 2
+console.log("Division Assignment: y /= 2 => y = " + y); // y = 5 / 2 = 2.5
 
-// Division assignment
-x /= y; // x = x / y
-console.log("Division assignment (x /= y): " + x); // 16 / 4 = 4
+x %= 3; // x = x % 3
+console.log("Modulo Assignment: x %= 3 => x = " + x); // x = 50 % 3 = 2
+
+
+Output:
+
+Arithmetic Operations:
+Addition: a + b = 15
+Subtraction: a - b = 5
+Multiplication: a * b = 50
+Division: a / b = 2
+Modulo (Remainder): a % b = 0
+
+Assignment Operations:
+Addition Assignment: x += 5 => x = 25
+Subtraction Assignment: y -= 3 => y = 5
+Multiplication Assignment: x *= 2 => x = 50
+Division Assignment: y /= 2 => y = 2.5
+Modulo Assignment: x %= 3 => x = 2
