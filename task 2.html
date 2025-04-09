@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Custom Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .section {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Welcome section styles */
+        #welcome {
+            background-color: #e0e0e0;
+            text-align: center;
+        }
+
+        #welcome h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .welcome-text-box {
+            background-color: #ccf6ff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        /* Dashboard section styles */
+        #dashboard {
+            background-color: #000;
+            color: white;
+        }
+
+        #dashboard h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        #dashboard p {
+            text-align: center;
+            font-size: 18px;
+            color: #ddd;
+        }
+
+        .dashboard-box {
+            background-color: #555;
+            height: 200px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Button styles */
+        .btn_div {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        #toggleBtn {
+            font-size: 20px;
+            padding: 12px 30px;
+            background-color: #f1f1f1;
+            border: 1px solid #888;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #toggleBtn:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Welcome Section -->
+    <div class="section" id="welcome">
+        <h1>Welcome to My Custom Designed Page!</h1>
+        <div class="welcome-text-box">
+            <p>This is some random text! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Fugiat mollitia enim sunt sapiente nemo assumenda eius tenetur architecto repellat, minus aut! 
+            Unde, ut hic. Pariatur repellat fugit esse explicabo officia! Lorem ipsum dolor sit amet 
+            consectetur adipisicing elit. Necessitatibus ipsum quibusdam veritatis consequatur perspiciatis 
+            delectus unde vitae, earum suscipit nisi ad veniam amet ipsam! Blanditiis culpa delectus ad 
+            cumque iste.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat mollitia enim sunt sapiente 
+            nemo assumenda eius tenetur architecto repellat, minus aut! Unde, ut hic. Pariatur repellat 
+            fugit esse explicabo officia! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div class="section" id="dashboard" style="display: none;">
+        <h1>Welcome to the Custom Dashboard</h1>
+        <p>It doesn't have any functionalities yet!</p>
+        <div class="dashboard-box"></div>
+    </div>
+
+    <!-- Toggle Button -->
+    <div class="btn_div">
+        <button id="toggleBtn" onclick="toggleSections()">Click here to see the Dashboard</button>
+    </div>
+
+    <script>
+        function toggleSections() {
+            const welcomeSection = document.getElementById('welcome');
+            const dashboardSection = document.getElementById('dashboard');
+            const toggleButton = document.getElementById('toggleBtn');
+
+            const isWelcomeVisible = welcomeSection.style.display !== "none";
+
+            welcomeSection.style.display = isWelcomeVisible ? "none" : "block";
+            dashboardSection.style.display = isWelcomeVisible ? "block" : "none";
+            toggleButton.textContent = isWelcomeVisible ? "Click here to return to Home" : "Click here to see the Dashboard";
+        }
+    </script>
+
+</body>
+</html>
