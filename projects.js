@@ -137,12 +137,12 @@ const projects = [
         title: "Task 12 class work",
         date: "2025",
         description: "Introduction to JavaScript classes",
-        fileType: "zip",
+        fileType: "html",
         technologies: ["JavaScript", "OOP"],
         features: ["Object-oriented programming"],
-        path: "task 12.zip",
-        demo: "#",
-        code: "#"
+        path: "task 12.html",
+        demo: "task 12.html",
+        code: "task 12.html"
     },
     {
         id: 13,
