@@ -142,7 +142,7 @@ const projects = [
         features: ["Object-oriented programming"],
         path: "task 12.html",
         demo: "task 12.html",
-        code: "task 12.html"
+        code: "#"
     },
     {
         id: 13,
