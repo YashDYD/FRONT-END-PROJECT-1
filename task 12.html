@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+       
+    </head>
+    <body>
+        <input type="text" id="input1" placeholder="Enter A"/>
+        <input type="text" id="input2" placeholder="Enter B"/>
+        <button onclick="calculate();">Calculate</button>
+
+        <div id="demo">
+            The sum is : <span id="output"></span>
+        </div>
+
+        <script>
+            let colors=["red","green","blue","yellow"];
+            let idx=0;
+
+            function calculate() {
+                let a=parseInt(document.getElementById("input1").value);
+                let b=parseInt(document.getElementById("input2").value);
+                let sum=0;
+                if(a>b){
+                    sum=0;
+                }
+                else{
+                    let i=a;
+                    do{
+                        sum +=i;
+                        i++;
+                    }while(i<=b);
+                }
+                
+            document.getElementById("output").innerHTML=sum;
+            document.getElementById("output").style="color: " + colors[idx];
+            idx = (idx + 1) % colors.length;
+            }
+        </script>
+    </body>
+</html>
