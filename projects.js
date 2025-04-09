@@ -17,7 +17,7 @@ const projects = [
         title: "Task 2 Basic HTML styling",
         date: "2025",
         description: "HTML and CSS fundamentals",
-        fileType: "HTML",
+        fileType: "html",
         technologies: ["HTML", "CSS"],
         features: ["Styling basics"],
         path: "task 2.html",
