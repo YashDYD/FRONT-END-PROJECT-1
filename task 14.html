@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Information</title>
+  <style>
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #insertButton {
+      background-color: #4CAF50;
+    }
+
+    #clearInputsButton {
+      background-color: #f44336;
+    }
+
+    #showAllButton {
+      background-color: #2196F3;
+    }
+
+    #clearDisplayButton {
+      background-color: #ff9800;
+    }
+
+    input {
+      margin: 5px;
+    }
+
+    #searchInput {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Information</h1>
+
+  <div>
+    <h2>Update Details:</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter Name">
+    <label for="age">Age:</label>
+    <input type="number" id="age" placeholder="Enter Age">
+    <label for="branch">Branch:</label>
+    <input type="text" id="branch" placeholder="Enter Branch">
+    <button id="insertButton" onclick="updateInfo()">Insert Info</button>
+    <button id="clearInputsButton" onclick="clearInputs()">Clear Inputs</button>
+  </div>
+
+  <h2>Search Student History:</h2>
+  <input type="text" id="searchInput" placeholder="Search by Name" onkeyup="searchInfo()">
+  
+  <h2>Student History:</h2>
+  <button id="showAllButton" onclick="showAll()">Show All</button>
+  <button id="clearDisplayButton" onclick="clearDisplay()">Clear Display</button>
+
+  <ul id="infoList"></ul>
+
+  <script>
+    let studentInfo = [];
+
+    function updateInfo() {
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+      const branch = document.getElementById("branch").value;
+      if (name && age && branch) {
+        studentInfo.push({ name, age, branch });
+        clearInputs();
+        showAll();
+      } else {
+        alert("Please fill all the fields.");
+      }
+    }
+
+    function clearInputs() {
+      document.getElementById("name").value = "";
+      document.getElementById("age").value = "";
+      document.getElementById("branch").value = "";
+    }
+
+    function showAll() {
+      const infoList = document.getElementById("infoList");
+      infoList.innerHTML = "";
+      studentInfo.forEach((student) => {
+        const li = document.createElement("li");
+        li.textContent = `Name: ${student.name}, Age: ${student.age}, Branch: ${student.branch}`;
+        infoList.appendChild(li);
+      });
+    }
+
+    function clearDisplay() {
+      const infoList = document.getElementById("infoList");
+      infoList.innerHTML = "";
+    }
+
+    function searchInfo() {
+      const searchInput = document.getElementById("searchInput").value.toLowerCase();
+      const filteredInfo = studentInfo.filter((student) =>
+        student.name.toLowerCase().includes(searchInput)
+      );
+      const infoList = document.getElementById("infoList");
+      infoList.innerHTML = "";
+
+      filteredInfo.forEach((student) => {
+        const li = document.createElement("li");
+        li.textContent = `Name: ${student.name}, Age: ${student.age}, Branch: ${student.branch}`;
+        infoList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
