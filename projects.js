@@ -21,7 +21,7 @@ const projects = [
         technologies: ["HTML", "CSS"],
         features: ["Styling basics"],
         path: "task 2.html",
-        demo: "#",
+        demo: "task 2.html",
         code: "#"
     },
     {
